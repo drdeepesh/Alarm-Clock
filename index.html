@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <!-- container for analog and digital clock -->
+    <div class="container">
+        <!-- analog clock -->
+        <div class="clock">
+            <!-- Clock hour hand -->
+            <div style="--clr: rgba(248, 248, 0, 0.716); --h:70px" id="hour" class="hand"><b></b></div>
+            <!-- Clock Minute hand -->
+            <div style="--clr: rgba(196, 196, 255, 0.861); --h:85px" id="min" class="hand"><b></b></div>
+            <!-- Clock second hand -->
+            <div style="--clr: #ffffff; --h:95px" id="sec" class="hand"><b></b></div>
+
+            <!-- span for numbers in clock -->
+            <span style="--i:1"><b>1</b></span>
+            <span style="--i:2"><b>2</b></span>
+            <span style="--i:3"><b>3</b></span>
+            <span style="--i:4"><b>4</b></span>
+            <span style="--i:5"><b>5</b></span>
+            <span style="--i:6"><b>6</b></span>
+            <span style="--i:7"><b>7</b></span>
+            <span style="--i:8"><b>8</b></span>
+            <span style="--i:9"><b>9</b></span>
+            <span style="--i:10"><b>10</b></span>
+            <span style="--i:11"><b>11</b></span>
+            <span style="--i:12"><b>12</b></span>
+        </div>
+
+        <!-- digital clock -->
+        <div class="digi-clock">
+            <h1 id="time">12:00:00</h1>
+            <span id="format">AM</span>
+        </div>
+        
+    </div>
+
+    <!-- container for setting the Alarm time -->
+    <div class="alarm-container">
+        <!-- alarm timings -->
+        <div class="alarm-input">
+            <select name="" id="">
+                <option value="hour" selected hidden disabled>Hour</option>
+            </select>
+            <select name="" id="">
+                <option value="minute" selected hidden disabled>Minute</option>
+            </select>
+            <select name="" id="">
+                <option value="ampm" selected hidden disabled>AM/PM</option>
+            </select>
+        </div>
+        <!-- button to set the alarm -->
+        <button class="set-alarm">Set Alarm</button>
+    </div>
+
+    <!-- container for all the upcoming alarm lists -->
+    <div class="alarm-list-container">
+        <h3>Alarms</h3>
+    </div>
+    
+
+    <!-- script -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

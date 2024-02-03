@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+/* styling the body tag */
+body{
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 7px;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #212121;
+}
+
+/* analog and digital clock container */
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* outer div of analog clock */
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* stling the clock timing number outer span */
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 10px;
+    text-align: center;
+}
+
+/* stling the clock timing number inner part */
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 18px;
+}
+
+/* starting points of all the hands i.e. hour, minute, second */
+.clock::before{
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Styling all the hands outer div*/
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Styling all the hands for bolder part*/
+.hand b{
+    position: absolute;
+    width: 5px;
+    height: var(--h);
+    background-color: var(--clr);
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Digital clock */
+.digi-clock{
+    position: absolute;
+    width: 300px;
+    height: 55px;
+    margin-top: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4), 0px 0px 20px rgba(235, 221, 221, 0.7);
+    border-radius: 13px;
+}
+
+/* timer for digital clock */
+#time{
+    padding: 2px;
+    font-weight: 500;
+}
+
+/* Styling the AM/PM format for digital clock */
+#format{
+    margin-left: 5px;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+
+
+
+
+/* Alarm Section */
+.alarm-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    top: 100px;
+    background-color: #063027ef;
+}
+
+/* outer div of the select tag */
+.alarm-input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* styling the alarm timing select tags */
+.alarm-input select{
+    width: 30%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* styling the button to set the alarm */
+.set-alarm{
+    
+    background-color: #00ffff;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+/* styling the button to set the alarm  on hover*/
+.set-alarm:hover{
+    background-color: #828af6f0;
+}
+
+/* container for the upcoming alarms */
+.alarm-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    top: 110px;
+    background-color: #063027ef;
+}
+
+.alarm-list-container h3{
+    margin-bottom: 10px;
+}
+
+/* list of the upcoming alarms timing "created using js" */
+.alarm-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* button to delete upcoming alarms from the list "created using js" */
+.delete-button {
+    background-color: #d03737;
+    color: #fff;
+    margin-left: 100px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
